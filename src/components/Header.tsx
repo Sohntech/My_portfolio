@@ -84,7 +84,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
               whileHover={{
                 scale: 1.1,
                 rotate: 180,
-                transition: { duration: 0.3 },
+                transition: { duration: Infinity },
               }}
               whileTap={{ scale: 0.9 }}
             >
