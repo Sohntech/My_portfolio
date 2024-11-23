@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --neon-primary: #ff00ff;
+    --neon-secondary: #00ffff;
+    --neon-primary-rgb: 255, 0, 255;
+  }
+  
+  .dark {
+    --neon-primary: #00ffff;
+    --neon-secondary: #ff00ff;
+    --neon-primary-rgb: 0, 255, 255;
+  }
+}
+
+@layer components {
+  .neon-border {
+    @apply relative border border-transparent;
+  }
+
+  .neon-border::before {
+    content: '';
+    @apply absolute inset-0 -z-10 bg-gradient-to-r from-[var(--neon-primary)] to-[var(--neon-secondary)] blur-sm;
+  }
+
+  .cyber-glitch {
+    animation: glitch 1s linear infinite;
+  }
+
+  @keyframes glitch {
+    2%, 64% {
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%, 60% {
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62% {
+      transform: translate(0,0) skew(5deg);
+    }
+  }
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 1.5rem;
+}
