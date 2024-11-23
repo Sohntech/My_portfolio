@@ -41,7 +41,7 @@ export const About: React.FC = () => {
           </motion.p>
 
           <motion.a
-            href="/src/assets/CvDeNdiaga.pdf" 
+            href="https://pdf.ac/1h1ulj" 
             download
             className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-[var(--neon-primary)] to-[var(--neon-secondary)] text-black dark:text-white font-medium space-x-2 hover:opacity-90 transition-opacity"
             whileHover={{ scale: 1.05 }}
