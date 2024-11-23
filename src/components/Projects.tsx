@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Threadline",
     description: "Application web de réseau social de tailleurs ",
-    image: "/src/assets/threadline.png",
+    image: "https://res.cloudinary.com/drxouwbms/image/upload/v1732391039/n42nbuhcpizq32ajjua8.png",
     tags: ["NodeJs", "Mysql", "ReactJs"],
     github: "https://github.com",
     live: "https://threadline.vercel.app"
@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Tsunami web",
     description: "Simulation d'Application de transfert d'argent",
-    image: "/src/assets/Tsunami_web.png",
+    image: "https://res.cloudinary.com/drxouwbms/image/upload/v1732391039/z9k1hcdikwqiuirhnjct.png",
     tags: ["NodeJs", "Angular", "MongoDB"],
     github: "https://github.com",
     live: "https://example.com"

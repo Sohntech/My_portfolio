@@ -10,7 +10,7 @@ const technologies = [
   { name: 'Dart', icon: <i className="devicon-dart-plain colored" /> },
   { name: 'Flutter', icon: <i className="devicon-flutter-plain colored" /> },
   { name: 'Node.js', icon: <i className="devicon-nodejs-plain colored" /> },
-  { name: 'React', icon: <i className="devicon-react-plain colored" /> },
+  { name: 'React.js', icon: <i className="devicon-react-plain colored" /> },
   { name: 'Angular', icon: <i className="devicon-angularjs-plain colored"></i>},
   { name: 'Docker', icon: <i className="devicon-docker-plain colored" /> },
   { name: 'MongoDB', icon: <i className="devicon-mongodb-plain colored" /> },
@@ -23,7 +23,9 @@ const technologies = [
   { name: 'Bootstrap', icon: <i className="devicon-bootstrap-plain colored" /> },
   { name: 'Express.js', icon: <i className="devicon-express-original colored" /> },
   { name: 'Github', icon: <i className="devicon-github-plain colored" /> },
-  { name: 'WordPress', icon: <i className="devicon-wordpress-plain colored" /> },
+  { name: 'Swagger', icon: <i className="devicon-swagger-plain colored" /> },
+  { name: 'Typescript', icon: <i className="devicon-typescript-plain colored" /> },
+
 ];
 
 export const TechStack: React.FC = () => {

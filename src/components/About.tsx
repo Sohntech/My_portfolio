@@ -13,7 +13,7 @@ export const About: React.FC = () => {
         <div className="relative">
           <div className="aspect-square rounded-2xl border-4 border-gray-200 overflow-hidden neon-border">
             <img
-              src="/src/assets/me_enhanced.jpeg"
+              src="https://res.cloudinary.com/drxouwbms/image/upload/v1732391040/h3gxu5c7wsfkmwbbkfiq.png"
               alt="Profile"
               className="w-full h-full object-cover"
             />
