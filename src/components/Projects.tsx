@@ -109,7 +109,7 @@ export const Projects: React.FC = () => {
             <motion.img
               src={selectedProject.image}
               alt={selectedProject.title}
-              className="w-full h-96 object-cover rounded-t-lg"
+              className="w-full h-fit object-cover rounded-t-lg"
               initial={{ scale: 1.1 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
