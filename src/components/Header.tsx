@@ -40,7 +40,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
               animate={{ opacity: 1, x: 0 }}
               className="text-2xl font-bold bg-gradient-to-r from-[var(--neon-primary)] to-[var(--neon-secondary)] text-transparent bg-clip-text"
             >
-              Portfolio
+              Sohntech
             </motion.div>
 
             {/* Menu et Dark Mode */}
