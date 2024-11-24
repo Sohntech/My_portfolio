@@ -104,7 +104,7 @@ const technologies = [
   },
   { 
     name: 'Github', 
-    icon: <i className="devicon-github-plain colored"></i>, 
+    icon: <i className="devicon-github-plain "></i>, 
     description: 'GitHub est une plateforme de collaboration et de gestion de code source basée sur Git. Elle est utilisée pour héberger et suivre les versions des projets.' 
   },
   { 
