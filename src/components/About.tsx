@@ -19,7 +19,7 @@ export const About: React.FC = () => {
         {/* Carte animée */}
         <div className="relative flex justify-center">
           <div
-            className={`w-[350px] h-[350px] relative transform-style-3d transition-transform duration-700 ${
+            className={`w-[500px] h-[500px] relative transform-style-3d transition-transform duration-700 ${
               isFlipped ? "rotate-y-180" : ""
             }`}
             onClick={handleFlip}
@@ -41,7 +41,7 @@ export const About: React.FC = () => {
                 <img
                   src="https://res.cloudinary.com/drxouwbms/image/upload/v1732463478/mr7ibj6cov01r770ailh.png"
                   alt="QR Code"
-                  className="w-fit h-fit object-contain"
+                  className="w-[90%] h-[90%] object-contain"
                 />
               </div>
             </div>
