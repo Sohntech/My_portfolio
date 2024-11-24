@@ -16,15 +16,15 @@ export const About: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
       >
-        {/* Flip Card Container */}
-        <div className="relative perspective">
+        {/* Carte animée */}
+        <div className="relative flex justify-center">
           <div
-            className={`w-64 h-64 mx-auto relative preserve-3d transition-transform duration-700 ${
+            className={`w-64 h-64 relative transform-style-3d transition-transform duration-700 ${
               isFlipped ? "rotate-y-180" : ""
             }`}
             onClick={handleFlip}
           >
-            {/* Front Side */}
+            {/* Face avant : Photo */}
             <div className="absolute w-full h-full backface-hidden">
               <div className="aspect-square rounded-2xl border-4 border-gray-200 overflow-hidden neon-border">
                 <img
@@ -35,7 +35,7 @@ export const About: React.FC = () => {
               </div>
             </div>
 
-            {/* Back Side */}
+            {/* Face arrière : QR Code */}
             <div className="absolute w-full h-full backface-hidden rotate-y-180">
               <div className="aspect-square rounded-2xl border-4 border-gray-200 overflow-hidden neon-border bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
                 <img
@@ -48,7 +48,7 @@ export const About: React.FC = () => {
           </div>
         </div>
 
-        {/* About Information */}
+        {/* Informations About */}
         <div className="space-y-6">
           <motion.h1
             initial={{ opacity: 0 }}
