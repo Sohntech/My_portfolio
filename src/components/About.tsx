@@ -19,14 +19,14 @@ export const About: React.FC = () => {
         {/* Carte animée */}
         <div className="relative flex justify-center">
           <div
-            className={`w-64 h-64 relative transform-style-3d transition-transform duration-700 ${
+            className={`w-[350px] h-[350px] relative transform-style-3d transition-transform duration-700 ${
               isFlipped ? "rotate-y-180" : ""
             }`}
             onClick={handleFlip}
           >
             {/* Face avant : Photo */}
             <div className="absolute w-full h-full backface-hidden">
-              <div className="aspect-square rounded-2xl border-4 border-gray-200 overflow-hidden neon-border">
+              <div className="rounded-2xl border-4 border-gray-200 overflow-hidden neon-border">
                 <img
                   src="https://res.cloudinary.com/drxouwbms/image/upload/v1732391040/h3gxu5c7wsfkmwbbkfiq.png"
                   alt="Profile"
@@ -37,11 +37,11 @@ export const About: React.FC = () => {
 
             {/* Face arrière : QR Code */}
             <div className="absolute w-full h-full backface-hidden rotate-y-180">
-              <div className="aspect-square rounded-2xl border-4 border-gray-200 overflow-hidden neon-border bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+              <div className="rounded-2xl border-4 border-gray-200 overflow-hidden neon-border bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
                 <img
                   src="https://res.cloudinary.com/drxouwbms/image/upload/v1732462509/jw3s9unctckgfgbhgth4.png"
                   alt="QR Code"
-                  className="w-3/4 h-3/4 object-contain"
+                  className="w-4/5 h-4/5 object-contain"
                 />
               </div>
             </div>
