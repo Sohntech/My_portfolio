@@ -41,7 +41,7 @@ export const About: React.FC = () => {
                 <img
                   src="https://res.cloudinary.com/drxouwbms/image/upload/v1732463478/mr7ibj6cov01r770ailh.png"
                   alt="QR Code"
-                  className="w-[90%] h-[90%] object-contain"
+                  className="w-fit h-fit object-contain"
                 />
               </div>
             </div>
