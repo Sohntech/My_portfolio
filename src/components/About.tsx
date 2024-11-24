@@ -43,7 +43,7 @@ export const About: React.FC = () => {
           <motion.a
             href="https://drive.google.com/uc?id=1GSeuxT75mrgHufQPJkx-nEHvMuOMbqzE&export=download" 
             download
-            className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-[var(--neon-primary)] to-[var(--neon-secondary)] text-black dark:text-white font-medium space-x-2 hover:opacity-90 transition-opacity"
+            className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-[var(--neon-primary)] to-[var(--neon-secondary)] text-black dark:text-white font-medium space-x-2 hover:opacity-90 transition-opacity" target='_blank'
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
