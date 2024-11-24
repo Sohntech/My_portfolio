@@ -39,7 +39,7 @@ export const About: React.FC = () => {
             <div className="absolute w-full h-full backface-hidden rotate-y-180">
               <div className="rounded-2xl border-4 border-gray-200 overflow-hidden neon-border bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
                 <img
-                  src="https://res.cloudinary.com/drxouwbms/image/upload/v1732462509/jw3s9unctckgfgbhgth4.png"
+                  src="https://res.cloudinary.com/drxouwbms/image/upload/v1732463478/mr7ibj6cov01r770ailh.png"
                   alt="QR Code"
                   className="w-fit h-fit object-contain"
                 />
