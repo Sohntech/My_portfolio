@@ -187,8 +187,8 @@ export const TechStack: React.FC = () => {
               </button>
               <div className="text-center">
                 <span className="text-4xl">{selectedTech.icon}</span>
-                <h3 className="text-2xl font-bold mt-4">{selectedTech.name}</h3>
-                <p className="mt-2">{selectedTech.description}</p>
+                <h3 className="text-2xl font-bold mt-4  dark:text-white">{selectedTech.name}</h3>
+                <p className="mt-2 dark:text-white">{selectedTech.description}</p>
               </div>
             </motion.div>
           </motion.div>
