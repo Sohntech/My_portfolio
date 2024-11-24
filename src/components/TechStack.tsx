@@ -154,7 +154,7 @@ export const TechStack: React.FC = () => {
             key={tech.name}
             whileHover={{ scale: 1.1, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
-            className="flex flex-col items-center p-4 rounded-lg bg-gray-100 dark:bg-gray-900 shadow-lg hover:shadow-2xl cursor-pointer"
+            className="flex flex-col items-center p-4 rounded-lg bg-gray-100 dark:bg-gray-900 shadow-lg hover:shadow-2xl cursor-pointer dark:text-white"
             onClick={() => openModal(tech)}
           >
             <span className="text-3xl mb-2">{tech.icon}</span>
