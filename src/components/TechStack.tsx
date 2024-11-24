@@ -5,34 +5,118 @@ const technologies = [
   { 
     name: 'PHP', 
     icon: <i className="devicon-php-plain colored"></i>, 
-    description: 'PHP (Hypertext Preprocessor) est un langage de script open-source utilisé principalement pour le développement côté serveur. Il permet de créer des applications dynamiques et interactives, comme les systèmes de gestion de contenu ou les sites e-commerce.' 
+    description: 'PHP (Hypertext Preprocessor) est un langage de script open-source utilisé principalement pour le développement côté serveur. Il est idéal pour créer des applications dynamiques telles que les blogs, les forums ou les sites e-commerce.' 
   },
   { 
     name: 'Laravel', 
     icon: <i className="devicon-laravel-plain colored"></i>, 
-    description: 'Laravel est un framework PHP élégant et robuste qui simplifie le développement en fournissant des outils comme l\'ORM Eloquent, les migrations de base de données, et le routage clair.' 
+    description: 'Laravel est un framework PHP élégant et robuste. Il simplifie le développement avec des outils tels que l\'ORM Eloquent, les migrations de base de données et un système de routage clair et puissant.' 
   },
   { 
     name: 'HTML', 
     icon: <i className="devicon-html5-plain colored"></i>, 
-    description: 'HTML (HyperText Markup Language) est la base de la structure des pages web. Il permet de définir les en-têtes, les paragraphes, les images, les liens et bien plus, en construisant le squelette d\'un site.' 
+    description: 'HTML (HyperText Markup Language) est la base de la structure des pages web. Il permet de définir les en-têtes, les paragraphes, les images, les vidéos et plus encore.' 
   },
   { 
     name: 'CSS', 
     icon: <i className="devicon-css3-plain colored"></i>, 
-    description: 'CSS (Cascading Style Sheets) permet de styliser les éléments HTML en définissant des couleurs, des polices, des marges, et des animations. Il est essentiel pour créer des designs attrayants et responsives.' 
+    description: 'CSS (Cascading Style Sheets) est utilisé pour styliser les éléments HTML. Il offre des possibilités de design infini, des animations fluides aux mises en page responsives.' 
   },
   { 
     name: 'JavaScript', 
     icon: <i className="devicon-javascript-plain colored"></i>, 
-    description: 'JavaScript est un langage de programmation orienté scripts utilisé pour rendre les sites web interactifs. Il est souvent utilisé pour les animations, la validation de formulaires, et les requêtes asynchrones.' 
+    description: 'JavaScript est le langage de programmation principal du web. Il rend les pages interactives grâce à des animations, des validations de formulaires et des appels API asynchrones.' 
   },
   { 
     name: 'Dart', 
     icon: <i className="devicon-dart-plain colored"></i>, 
-    description: 'Dart est un langage développé par Google, utilisé principalement avec Flutter pour créer des applications multiplateformes performantes.' 
+    description: 'Dart est un langage de programmation développé par Google. Il est principalement utilisé avec Flutter pour créer des applications performantes sur plusieurs plateformes.' 
   },
-  // Ajoute ici plus de technologies si nécessaire...
+  { 
+    name: 'Flutter', 
+    icon: <i className="devicon-flutter-plain colored"></i>, 
+    description: 'Flutter est un framework UI de Google. Il permet de créer des applications mobiles, web et desktop avec une base de code unique, tout en offrant des performances élevées.' 
+  },
+  { 
+    name: 'Node.js', 
+    icon: <i className="devicon-nodejs-plain colored"></i>, 
+    description: 'Node.js est un environnement d\'exécution JavaScript côté serveur. Il est connu pour sa vitesse, sa scalabilité et son efficacité dans les applications temps réel.' 
+  },
+  { 
+    name: 'React.js', 
+    icon: <i className="devicon-react-plain colored"></i>, 
+    description: 'React.js est une bibliothèque JavaScript pour créer des interfaces utilisateur dynamiques. Il utilise un DOM virtuel pour des performances rapides et une gestion efficace des états.' 
+  },
+  { 
+    name: 'Angular', 
+    icon: <i className="devicon-angularjs-plain colored"></i>, 
+    description: 'Angular est un framework front-end complet développé par Google. Il est utilisé pour créer des applications web dynamiques grâce à son architecture basée sur les composants.' 
+  },
+  { 
+    name: 'Docker', 
+    icon: <i className="devicon-docker-plain colored"></i>, 
+    description: 'Docker est une plateforme open-source qui automatise le déploiement des applications dans des conteneurs légers, permettant une portabilité et une isolation maximales.' 
+  },
+  { 
+    name: 'MongoDB', 
+    icon: <i className="devicon-mongodb-plain colored"></i>, 
+    description: 'MongoDB est une base de données NoSQL orientée documents. Elle est idéale pour stocker des données non structurées et s\'adapte parfaitement aux architectures modernes.' 
+  },
+  { 
+    name: 'Firebase', 
+    icon: <i className="devicon-firebase-plain colored"></i>, 
+    description: 'Firebase est une plateforme de développement d\'applications mobiles et web proposée par Google. Elle inclut des services comme l\'authentification, la base de données en temps réel et l\'hébergement.' 
+  },
+  { 
+    name: 'MySQL', 
+    icon: <i className="devicon-mysql-plain colored"></i>, 
+    description: 'MySQL est un système de gestion de bases de données relationnelles open-source. Il est utilisé pour stocker et gérer des données structurées.' 
+  },
+  { 
+    name: 'PostgreSQL', 
+    icon: <i className="devicon-postgresql-plain colored"></i>, 
+    description: 'PostgreSQL est un système de gestion de bases de données relationnelles avancé. Il supporte des fonctionnalités complexes comme le stockage JSON et la réplication.' 
+  },
+  { 
+    name: 'Figma', 
+    icon: <i className="devicon-figma-plain colored"></i>, 
+    description: 'Figma est un outil de design collaboratif basé sur le cloud. Il est idéal pour créer des prototypes interactifs et des interfaces utilisateur modernes.' 
+  },
+  { 
+    name: 'Postman', 
+    icon: <i className="devicon-postman-plain colored"></i>, 
+    description: 'Postman est un outil pour tester les APIs. Il permet de simuler des requêtes HTTP et de valider les réponses pour faciliter le développement et le débogage.' 
+  },
+  { 
+    name: 'TailwindCSS', 
+    icon: <i className="devicon-tailwindcss-plain colored"></i>, 
+    description: 'TailwindCSS est un framework CSS utilitaire. Il permet de construire des interfaces rapidement en utilisant des classes préconfigurées pour chaque élément.' 
+  },
+  { 
+    name: 'Bootstrap', 
+    icon: <i className="devicon-bootstrap-plain colored"></i>, 
+    description: 'Bootstrap est un framework CSS populaire. Il fournit des composants prêts à l\'emploi pour créer des designs responsives rapidement.' 
+  },
+  { 
+    name: 'Express.js', 
+    icon: <i className="devicon-express-original colored"></i>, 
+    description: 'Express.js est un framework léger pour Node.js. Il est utilisé pour construire des APIs et des applications web rapidement et efficacement.' 
+  },
+  { 
+    name: 'Github', 
+    icon: <i className="devicon-github-plain colored"></i>, 
+    description: 'GitHub est une plateforme de collaboration et de gestion de code source basée sur Git. Elle est utilisée pour héberger et suivre les versions des projets.' 
+  },
+  { 
+    name: 'Swagger', 
+    icon: <i className="devicon-swagger-plain colored"></i>, 
+    description: 'Swagger est un outil pour documenter et tester les APIs. Il génère automatiquement une interface utilisateur pour interagir avec les endpoints.' 
+  },
+  { 
+    name: 'TypeScript', 
+    icon: <i className="devicon-typescript-plain colored"></i>, 
+    description: 'TypeScript est une surcouche de JavaScript qui ajoute des types statiques. Il améliore la lisibilité du code et aide à éviter les erreurs.' 
+  },
 ];
 
 export const TechStack: React.FC = () => {
@@ -42,13 +126,8 @@ export const TechStack: React.FC = () => {
     icon: JSX.Element;
   } | null>(null);
 
-  const openModal = (tech: typeof technologies[0]) => {
-    setSelectedTech(tech);
-  };
-
-  const closeModal = () => {
-    setSelectedTech(null);
-  };
+  const openModal = (tech: typeof technologies[0]) => setSelectedTech(tech);
+  const closeModal = () => setSelectedTech(null);
 
   return (
     <section className="py-20">
@@ -67,34 +146,23 @@ export const TechStack: React.FC = () => {
         animate="visible"
         variants={{
           hidden: { opacity: 0, scale: 0.8 },
-          visible: {
-            opacity: 1,
-            scale: 1,
-            transition: { staggerChildren: 0.1, duration: 0.5 },
-          },
+          visible: { opacity: 1, scale: 1, transition: { staggerChildren: 0.1 } },
         }}
       >
-        {technologies.map((tech, index) => (
+        {technologies.map((tech) => (
           <motion.div
             key={tech.name}
-            whileHover={{
-              scale: 1.1,
-              rotate: 5,
-              transition: { type: 'spring', stiffness: 300, damping: 10 },
-            }}
+            whileHover={{ scale: 1.1, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
-            className="flex flex-col items-center p-4 rounded-lg bg-gray-100 dark:bg-gray-900 shadow-lg hover:shadow-2xl transition-shadow cursor-pointer"
+            className="flex flex-col items-center p-4 rounded-lg bg-gray-100 dark:bg-gray-700 shadow-lg hover:shadow-2xl cursor-pointer"
             onClick={() => openModal(tech)}
           >
             <span className="text-3xl mb-2">{tech.icon}</span>
-            <span className="text-sm text-center text-gray-800 dark:text-gray-200">
-              {tech.name}
-            </span>
+            <p className="text-sm font-medium">{tech.name}</p>
           </motion.div>
         ))}
       </motion.div>
 
-      {/* Modal */}
       <AnimatePresence>
         {selectedTech && (
           <motion.div
@@ -102,31 +170,24 @@ export const TechStack: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-            onClick={closeModal}
           >
             <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              transition={{ type: 'spring', stiffness: 200, damping: 20 }}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-md w-full"
-              onClick={(e) => e.stopPropagation()}
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.8 }}
+              className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg w-11/12 md:w-2/3 lg:w-1/2"
             >
-              <div className="flex justify-between items-center">
+              <button
+                onClick={closeModal}
+                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-500"
+              >
+                ×
+              </button>
+              <div className="text-center">
                 <span className="text-4xl">{selectedTech.icon}</span>
-                <button
-                  onClick={closeModal}
-                  className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-2xl"
-                >
-                  ×
-                </button>
+                <h3 className="text-2xl font-bold mt-4">{selectedTech.name}</h3>
+                <p className="mt-2">{selectedTech.description}</p>
               </div>
-              <h3 className="text-2xl font-bold mt-4 mb-2 text-gray-800 dark:text-gray-200">
-                {selectedTech.name}
-              </h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                {selectedTech.description}
-              </p>
             </motion.div>
           </motion.div>
         )}
