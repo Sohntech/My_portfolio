@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Moon, Sun, Github, Linkedin, Mail, Download } from 'lucide-react';
+import { Moon, Sun, Github, Linkedin, Mail } from 'lucide-react';
 import { Header } from './components/Header';
 import { About } from './components/About';
 import { Projects } from './components/Projects';
 import { TechStack } from './components/TechStack';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true); // Dark mode actif par défaut
+
+  // Ajouter automatiquement la classe 'dark' au chargement initial
+  useEffect(() => {
+    document.documentElement.classList.add('dark');
+  }, []);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -23,10 +28,10 @@ function App() {
           <TechStack />
           <Projects />
         </main>
-        
+
         <footer className="py-8 mt-20 border-t border-gray-200 dark:border-gray-800">
           <div className="flex justify-center space-x-6">
-            <a href="https://github.com/Sohntech " className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" target='_blank'>
+            <a href="https://github.com/Sohntech" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" target='_blank'>
               <Github className="w-6 h-6" />
             </a>
             <a href="https://www.linkedin.com/in/ndiaga-l-4a7581139" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" target='_blank'>
