@@ -48,3 +48,15 @@
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 1.5rem;
 }
+
+.perspective {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
