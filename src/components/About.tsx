@@ -81,6 +81,7 @@ export const About: React.FC = () => {
           >
             <Download className="w-5 h-5" />
             <span>Télécharger mon CV</span>
+            <span>ou cliquez sur ma photo et scannez le QR Code</span>
           </motion.a>
         </div>
       </motion.div>
