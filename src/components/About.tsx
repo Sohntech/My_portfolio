@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Download } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Download } from "lucide-react";
 
 export const About: React.FC = () => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -46,6 +46,10 @@ export const About: React.FC = () => {
               </div>
             </div>
           </div>
+          {/* Message sous l'image */}
+          <p className="mt-4 text-center text-gray-600 dark:text-gray-400">
+            Cliquez sur la photo pour scanner le QR Code ou télécharger mon CV.
+          </p>
         </div>
 
         {/* Informations About */}
@@ -81,8 +85,11 @@ export const About: React.FC = () => {
           >
             <Download className="w-5 h-5" />
             <span>Télécharger mon CV</span>
-            
           </motion.a>
+          {/* Indication supplémentaire */}
+          <p className="text-gray-600 dark:text-gray-400">
+            Vous pouvez aussi cliquer sur la photo ci-dessus pour scanner le QR Code et voir mon CV.
+          </p>
         </div>
       </motion.div>
     </section>
