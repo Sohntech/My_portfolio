@@ -84,7 +84,7 @@ export const About: React.FC = () => {
               <span>Télécharger mon CV</span>
             </motion.a>
 
-            <span className="text-[var(--neon-primary)] dark:text-[var(--neon-secondary)] text-lg">
+            <span className="text-[var(--neon-secondary)] dark:text-[var(--neon-primary)] text-lg">
               Ou cliquez sur la photo pour scanner
             </span>
           </div>
