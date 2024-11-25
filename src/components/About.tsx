@@ -83,7 +83,7 @@ export const About: React.FC = () => {
             <span>Télécharger mon CV</span>
             
           </motion.a>
-          <span>Ou cliquez sur la photo pour scanner le code Qr</span>
+          <span className="text-gray-600 dark:text-gray-400 text-lg ml-5">Ou cliquez sur la photo pour scanner le code Qr</span>
 
         </div>
       </motion.div>
