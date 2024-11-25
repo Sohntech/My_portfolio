@@ -83,7 +83,7 @@ export const About: React.FC = () => {
             <span>Télécharger mon CV</span>
             
           </motion.a>
-          <span className="text-[linear-gradient(var(--neon-primary), var(--neon-secondary))] dark:text-[linear-gradient(var(--neon-primary), var(--neon-secondary))] text-lg ml-5 ">Ou cliquez sur la photo pour scanner</span>
+          <span className="text-[var(--neon-primary)] dark:text-[var(--neon-secondary)] text-lg ml-5 ">Ou cliquez sur la photo pour scanner</span>
 
         </div>
       </motion.div>
