@@ -1,6 +1,6 @@
 import React from 'react';
 import { Moon, Sun } from 'lucide-react';
-import { motion, AnimatePresence, useAnimation } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface HeaderProps {
   darkMode: boolean;
@@ -29,33 +29,6 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
     },
   };
 
-  const titleControl = useAnimation();
-
-  const handleTitleHover = () => {
-    titleControl.start({
-      x: [-20, 20, -20],
-      y: [0, 10, 0],
-      scale: [1, 1.2, 1],
-      rotate: [-5, 5, -5],
-      transition: {
-        duration: 2,
-        repeat: Infinity,
-        repeatType: 'loop',
-        ease: 'easeInOut',
-      },
-    });
-  };
-
-  const handleTitleLeave = () => {
-    titleControl.stop();
-    titleControl.set({
-      x: 0,
-      y: 0,
-      scale: 1,
-      rotate: 0,
-    });
-  };
-
   return (
     <AnimatePresence>
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/75 dark:bg-gray-900/75 border-b border-gray-200 dark:border-gray-800">
@@ -64,9 +37,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             {/* Titre */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              onHoverStart={handleTitleHover}
-              onHoverEnd={handleTitleLeave}
-              animate={titleControl}
+              animate={{ opacity: 1, x: 0 }}
               className="text-2xl font-bold bg-gradient-to-r from-[var(--neon-primary)] to-[var(--neon-secondary)] text-transparent bg-clip-text"
             >
               Sohntech
