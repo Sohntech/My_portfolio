@@ -71,20 +71,23 @@ export const About: React.FC = () => {
             créatif pour donner vie à des projets uniques.
           </motion.p>
 
-          <motion.a
-            href="https://drive.google.com/uc?id=1GSeuxT75mrgHufQPJkx-nEHvMuOMbqzE&export=download"
-            download
-            className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-[var(--neon-primary)] to-[var(--neon-secondary)] text-black dark:text-white font-medium space-x-2 hover:opacity-90 transition-opacity"
-            target="_blank"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Download className="w-5 h-5" />
-            <span>Télécharger mon CV</span>
-            
-          </motion.a>
-          <span className="text-[var(--neon-primary)] dark:text-[var(--neon-secondary)] text-lg ml-5 -mt-5 ">Ou cliquez sur la photo pour scanner</span>
+          <div className="flex items-center space-x-4">
+            <motion.a
+              href="https://drive.google.com/uc?id=1GSeuxT75mrgHufQPJkx-nEHvMuOMbqzE&export=download"
+              download
+              className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-[var(--neon-primary)] to-[var(--neon-secondary)] text-black dark:text-white font-medium space-x-2 hover:opacity-90 transition-opacity"
+              target="_blank"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Download className="w-5 h-5" />
+              <span>Télécharger mon CV</span>
+            </motion.a>
 
+            <span className="text-[var(--neon-primary)] dark:text-[var(--neon-secondary)] text-lg">
+              Ou cliquez sur la photo pour scanner
+            </span>
+          </div>
         </div>
       </motion.div>
     </section>
