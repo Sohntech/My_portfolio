@@ -117,6 +117,11 @@ const technologies = [
     icon: <i className="devicon-typescript-plain colored"></i>, 
     description: 'TypeScript est une surcouche de JavaScript qui ajoute des types statiques. Il améliore la lisibilité du code et aide à éviter les erreurs.' 
   },
+  { 
+    name: 'Thunder Client', 
+    icon: <i className="devicon-thunder-client-plain colored"></i>, 
+    description: 'Thunder Client est un outil pour tester les APIs. Il permet de tester des requêtes HTTP en utilisant des fichiers JSON.' 
+  },
 ];
 
 export const TechStack: React.FC = () => {
