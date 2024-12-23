@@ -19,7 +19,7 @@ export const About: React.FC = () => {
             className="relative"
           >
             <div className="aspect-square rounded-full overflow-hidden shadow-2xl ring-4 ring-[var(--neon-primary)] ring-opacity-50">
-              <img src="/src/assets/me_enhanced.jpeg" alt="Profile" className="w-full h-full object-cover" />
+              <img src="/src/assets/me_enhanced.jpeg" alt="Profile" className="w-full h-full rounded-full object-cover" />
             </div>
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-[var(--neon-secondary)] rounded-full opacity-50 blur-2xl"></div>
             <div className="absolute -top-4 -left-4 w-32 h-32 bg-[var(--neon-primary)] rounded-full opacity-50 blur-2xl"></div>
