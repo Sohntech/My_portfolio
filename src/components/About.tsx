@@ -26,7 +26,7 @@ export const About: React.FC = () => {
           >
             {/* Face avant : Photo */}
             <div className="absolute w-full h-full backface-hidden">
-              <div className="rounded-full border-4 border-gray-200 overflow-hidden neon-border">
+              <div className="rounded-2xl border-4 border-gray-200 overflow-hidden neon-border">
                 <img
                   src="https://res.cloudinary.com/drxouwbms/image/upload/v1732391040/h3gxu5c7wsfkmwbbkfiq.png"
                   alt="Profile"
@@ -37,11 +37,11 @@ export const About: React.FC = () => {
 
             {/* Face arrière : QR Code */}
             <div className="absolute w-full h-full backface-hidden rotate-y-180">
-              <div className="rounded-full border-4 border-gray-200 overflow-hidden neon-border bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+              <div className="rounded-2xl border-4 border-gray-200 overflow-hidden neon-border bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
                 <img
                   src="https://res.cloudinary.com/drxouwbms/image/upload/v1732463478/mr7ibj6cov01r770ailh.png"
                   alt="QR Code"
-                  className="w-[80%] h-[80%] object-contain"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>
