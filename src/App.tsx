@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Moon, Sun, Github, Linkedin, Mail } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import {  Github, Linkedin, Mail } from 'lucide-react';
 import { Header } from './components/Header';
 import { About } from './components/About';
 import { Projects } from './components/Projects';
@@ -20,6 +19,7 @@ function App() {
   };
 
   return (
+    <section id="contact" >
     <div className={`min-h-screen ${darkMode ? 'dark bg-gray-900' : 'bg-gray-100'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
@@ -44,6 +44,7 @@ function App() {
         </footer>
       </div>
     </div>
+    </section>
   );
 }
 

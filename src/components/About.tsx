@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Download } from 'lucide-react';
 
 // Composant Particule
-const Particle = ({ x, y }) => (
+const Particle = ({ x, y }: { x: number; y: number }) => (
   <motion.div
     className="absolute w-2 h-2 bg-gradient-to-r from-[var(--neon-primary)] to-[var(--neon-secondary)] rounded-full"
     style={{ x, y }}
@@ -22,7 +22,7 @@ const Particle = ({ x, y }) => (
 
 export const About = () => {
   const [isFlipped, setIsFlipped] = useState(false);
-  const [particles, setParticles] = useState([]);
+  const [particles, setParticles] = useState<{ id: number; x: number; y: number }[]>([]);
 
   const handleFlip = () => {
     setIsFlipped(!isFlipped);
@@ -65,7 +65,7 @@ export const About = () => {
 
   const textAnimation = {
     initial: { y: 20, opacity: 0 },
-    animate: (i) => ({
+    animate: (i: number) => ({
       y: 0,
       opacity: 1,
       transition: {
@@ -110,7 +110,7 @@ export const About = () => {
             >
               <div className="rounded-2xl border-4 border-gray-200 overflow-hidden neon-border hover:shadow-2xl transition-shadow duration-300">
                 <img
-                  src="https://res.cloudinary.com/drxouwbms/image/upload/v1732391040/h3gxu5c7wsfkmwbbkfiq.png"
+                  src="https://res.cloudinary.com/drxouwbms/image/upload/t_crop/v1742057511/WhatsApp_Image_2025-03-13_at_12.18.06_jcpiyw.jpg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
@@ -125,7 +125,7 @@ export const About = () => {
             >
               <div className="rounded-2xl border-4 border-gray-200 overflow-hidden neon-border bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:shadow-2xl transition-shadow duration-300">
                 <img
-                  src="https://res.cloudinary.com/drxouwbms/image/upload/v1732463478/mr7ibj6cov01r770ailh.png"
+                  src="https://res.cloudinary.com/drxouwbms/image/upload/v1742057394/Portfolio_Ndiaga_mil4mc.png"
                   alt="QR Code"
                   className="w-full h-full object-contain"
                 />
@@ -177,7 +177,7 @@ export const About = () => {
             className="flex items-center space-x-4"
           >
             <motion.a
-              href="https://drive.google.com/uc?id=1GSeuxT75mrgHufQPJkx-nEHvMuOMbqzE&export=download"
+              href="https://drive.google.com/file/d/1UbRBk9xCghXvTeOL6835SDiYb4XHIVz3/view?usp=sharing"
               download
               className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-[var(--neon-primary)] to-[var(--neon-secondary)] text-black dark:text-white font-medium space-x-2 hover:opacity-90 transition-all"
               target="_blank"
@@ -188,7 +188,7 @@ export const About = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Download className="w-5 h-5" />
-              <span>Télécharger mon CV</span>
+              <span>Voir mon CV</span>
             </motion.a>
 
             <motion.span

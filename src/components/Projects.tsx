@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, X } from 'lucide-react';
+import {  X } from 'lucide-react';
 
 const projects = [
   {
@@ -12,19 +12,18 @@ const projects = [
     live: "https://threadline.vercel.app",
   },
   {
-    title: "Tsunami web",
-    description: "Simulation d'application de transfert d'argent.",
-    image: "https://res.cloudinary.com/drxouwbms/image/upload/v1732391039/z9k1hcdikwqiuirhnjct.png",
-    tags: ["NodeJs", "Angular", "MongoDB"],
-    github: "https://github.com",
-    live: "https://example.com",
+    title: "Sparkline",
+    description: "Landing page de la startup Sparkline.",
+    image: "https://res.cloudinary.com/drxouwbms/image/upload/v1742057927/Screenshot_2025-03-15_at_16.58.17_iy8fsq.png",
+    tags: ["ReactJS", "TailwindCSS", "javascript"],
+    live: "https://www.sparkline.sn/",
   },
 ];
 
 export const Projects: React.FC = () => {
-  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
 
-  const openModal = (project: any) => {
+  const openModal = (project: typeof projects[0]) => {
     setSelectedProject(project);
   };
 

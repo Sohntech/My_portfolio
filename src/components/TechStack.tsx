@@ -165,7 +165,7 @@ export const TechStack: React.FC = () => {
   };
 
   return (
-    <section className="py-20">
+    <section id='techs' className="py-20">
       <motion.h2
         variants={titleVariants}
         initial="hidden"

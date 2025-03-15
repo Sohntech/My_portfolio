@@ -8,26 +8,6 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
-  const tabVariants = {
-    hover: {
-      scale: 1.05,
-      transition: {
-        duration: 0.2,
-        yoyo: Infinity,
-      },
-    },
-  };
-
-  const glowVariants = {
-    hover: {
-      opacity: [0.5, 1, 0.5],
-      scale: [1, 1.2, 1],
-      transition: {
-        duration: 1.5,
-        repeat: Infinity,
-      },
-    },
-  };
 
   return (
     <AnimatePresence>
@@ -47,7 +27,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             <div className="flex items-center space-x-6">
               {/* Liens */}
               <div className="hidden sm:flex items-center space-x-8">
-                {['Home', 'Projets', 'Contact'].map((item, index) => (
+                {[ 'about','techs', 'projects'].map((item) => (
                   <motion.div
                     key={item}
                     className="relative"
@@ -63,7 +43,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
                       }}
                     />
                     <motion.a
-                      href={`#${item.toLowerCase()}`}
+                      href={`#${item}`}
                       className="relative z-10 px-4 py-2 text-gray-700 dark:text-gray-300 transition-colors duration-200"
                       variants={{
                         hover: {
@@ -78,7 +58,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
                           hover: { opacity: 0.2 },
                         }}
                       />
-                      <motion.span className="relative z-10">{item}</motion.span>
+                      <motion.span className="relative z-10">{item.charAt(0).toUpperCase() + item.slice(1)}</motion.span>
                     </motion.a>
                   </motion.div>
                 ))}
