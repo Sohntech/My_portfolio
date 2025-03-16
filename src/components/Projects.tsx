@@ -1,29 +1,70 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import {  X } from 'lucide-react';
+import { X } from 'lucide-react';
 
-const projects = [
-  {
-    title: "Threadline",
-    description: "Application web de réseau social de tailleurs.",
-    image: "https://res.cloudinary.com/drxouwbms/image/upload/v1732391039/n42nbuhcpizq32ajjua8.png",
-    tags: ["NodeJs", "MySQL", "ReactJS"],
-    github: "https://github.com",
-    live: "https://threadline.vercel.app",
-  },
-  {
-    title: "Sparkline",
-    description: "Landing page de la startup Sparkline.",
-    image: "https://res.cloudinary.com/drxouwbms/image/upload/v1742057927/Screenshot_2025-03-15_at_16.58.17_iy8fsq.png",
-    tags: ["ReactJS", "TailwindCSS", "javascript"],
-    live: "https://www.sparkline.sn/",
-  },
-];
+const projects = {
+  applications: [
+    {
+      title: "Threadline",
+      description: "Application web de réseau social de tailleurs.",
+      image: "https://res.cloudinary.com/drxouwbms/image/upload/v1732391039/n42nbuhcpizq32ajjua8.png",
+      tags: ["NodeJs", "MySQL", "ReactJS"],
+      live: "https://threadline.vercel.app",
+    },
+    {
+      title: "Sparkline",
+      description: "Landing page de la startup Sparkline.",
+      image: "https://res.cloudinary.com/drxouwbms/image/upload/v1742057927/Screenshot_2025-03-15_at_16.58.17_iy8fsq.png",
+      tags: ["ReactJS", "TailwindCSS", "javascript"],
+      live: "https://www.sparkline.sn/",
+    },
+  ],
+  design: [
+    {
+      title: "8 Mars",
+      description: "Création d'une affiche pour la journée de la femme.",
+      image: "https://res.cloudinary.com/drxouwbms/image/upload/t_wide/v1742072123/WhatsApp_Image_2025-03-08_at_17.32.36_imxa8c.jpg",
+      tags: ["canva", "8 mars", "Sparkline"],
+      live: "https://res.cloudinary.com/drxouwbms/image/upload/v1742072123/WhatsApp_Image_2025-03-08_at_17.32.36_imxa8c.jpg",
+    },
+    {
+      title: "Ramadan",
+      description: "Création d'une affiche pour le ramadan",
+      image: "https://res.cloudinary.com/drxouwbms/image/upload/t_wide/v1742072125/WhatsApp_Image_2025-03-03_at_10.27.05_kgsko4.jpg",
+      tags: ["Canva", "Ramadan", "Sparkline"],
+      live: "https://res.cloudinary.com/drxouwbms/image/upload/v1742072125/WhatsApp_Image_2025-03-03_at_10.27.05_kgsko4.jpg",
+    },
+    {
+      title: "Makeup",
+      description: "Création d'une affiche pour un salon de beauté",
+      image: "https://res.cloudinary.com/drxouwbms/image/upload/t_wide/v1742072118/WhatsApp_Image_2024-12-15_at_20.40.41_jxixop.jpg",
+      tags: ["Canva", "Fashion", "Design"],
+      live: "https://res.cloudinary.com/drxouwbms/image/upload/v1742072118/WhatsApp_Image_2024-12-15_at_20.40.41_jxixop.jpg",
+    },
+    {
+      title: "Nails",
+      description: "Création d'une affiche pour un salon de pédicure et manucure", 
+      image: "https://res.cloudinary.com/drxouwbms/image/upload/t_wide/v1742072122/WhatsApp_Image_2024-12-15_at_21.45.41_hbevxf.jpg",
+      tags: ["Canva", "Nails", "Design"],
+      live: "https://res.cloudinary.com/drxouwbms/image/upload/v1742072122/WhatsApp_Image_2024-12-15_at_21.45.41_hbevxf.jpg",
+    },
+  ]
+};
 
 export const Projects: React.FC = () => {
-  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+  interface Project {
+    title: string;
+    description: string;
+    image: string;
+    tags: string[];
+    github?: string;
+    live?: string;
+  }
 
-  const openModal = (project: typeof projects[0]) => {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [activeTab, setActiveTab] = useState<'applications' | 'design'>('applications');
+
+  const openModal = (project: Project) => {
     setSelectedProject(project);
   };
 
@@ -36,15 +77,42 @@ export const Projects: React.FC = () => {
       <motion.h2
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text"
+        className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text"
       >
         Mes Projets
       </motion.h2>
 
+      {/* Tabs */}
+      <div className="flex justify-center mb-12">
+        <div className="flex rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">
+          <button
+            onClick={() => setActiveTab('applications')}
+            className={`px-6 py-3 text-lg font-medium transition-colors duration-300 ${
+              activeTab === 'applications'
+                ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white'
+                : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+            }`}
+          >
+            Applications
+          </button>
+          <button
+            onClick={() => setActiveTab('design')}
+            className={`px-6 py-3 text-lg font-medium transition-colors duration-300 ${
+              activeTab === 'design'
+                ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
+                : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+            }`}
+          >
+            Créations Graphiques
+          </button>
+        </div>
+      </div>
+
+      {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project, index) => (
+        {projects[activeTab].map((project, index) => (
           <motion.div
-            key={project.title}
+            key={`${activeTab}-${project.title}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
@@ -91,7 +159,7 @@ export const Projects: React.FC = () => {
           onClick={closeModal}
         >
           <motion.div
-            className="relative max-w-5xl w-full mx-4 md:mx-8 bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden"
+            className="relative mx-4 md:mx-8 bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden max-w-3xl w-full max-h-[80vh] overflow-y-auto"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
@@ -108,7 +176,7 @@ export const Projects: React.FC = () => {
             <motion.img
               src={selectedProject.image}
               alt={selectedProject.title}
-              className="w-full h-fit object-cover rounded-t-lg"
+              className="w-full h-auto rounded-t-lg"
               initial={{ scale: 1.1 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -137,22 +205,26 @@ export const Projects: React.FC = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                <a
-                  href={selectedProject.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[var(--neon-primary)] hover:underline text-xl"
-                >
-                  Code
-                </a>
-                <a
-                  href={selectedProject.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[var(--neon-primary)] hover:underline text-xl"
-                >
-                  Demo
-                </a>
+                {selectedProject.github && (
+                  <a
+                    href={selectedProject.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[var(--neon-primary)] hover:underline text-xl"
+                  >
+                    Code
+                  </a>
+                )}
+                {selectedProject.live && (
+                  <a
+                    href={selectedProject.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[var(--neon-primary)] hover:underline text-xl"
+                  >
+                    Voir la réalisation
+                  </a>
+                )}
               </motion.div>
             </div>
           </motion.div>

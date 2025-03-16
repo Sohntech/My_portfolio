@@ -11,7 +11,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
 
   return (
     <AnimatePresence>
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/75 dark:bg-gray-900/75 border-b border-gray-200 dark:border-gray-800">
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/75 dark:bg-gray-900/75 border-b border-gray-200 dark:border-gray-800 shadow-lg">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             {/* Titre */}
@@ -27,7 +27,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             <div className="flex items-center space-x-6">
               {/* Liens */}
               <div className="hidden sm:flex items-center space-x-8">
-                {[ 'about','techs', 'projects'].map((item) => (
+                {['about', 'techs', 'projects'].map((item) => (
                   <motion.div
                     key={item}
                     className="relative"
