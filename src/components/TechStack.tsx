@@ -117,6 +117,13 @@ const technologies = [
     icon: <i className="devicon-typescript-plain colored"></i>, 
     description: 'TypeScript est une surcouche de JavaScript qui ajoute des types statiques. Il améliore la lisibilité du code et aide à éviter les erreurs.' 
   },
+  { 
+    name: 'Next.js', 
+    icon: <i className="devicon-nextjs-plain "></i>, 
+    description: 'Next.js est un framework React pour le rendu côté serveur. Il offre des performances optimales, un routage dynamique et une préparation statique des pages pour une expérience utilisateur fluide.' 
+  },
+  
+  
   /* ... votre tableau de technologies ... */
 ];
 
